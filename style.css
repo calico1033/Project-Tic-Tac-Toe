@@ -1,4 +1,119 @@
-
 body {
     font-family: 'Audiowide', cursive;
+    font-size: 20px;
 }
+
+.heading {
+    text-align: center;
+}
+
+.winner-message {
+    font-family: 'Audiowide', cursive;
+    display: none;
+    position: fixed;
+    background-color: rgb(10, 186, 240, .80);
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+.winner-message button {
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.winner-message button:hover {
+    background-color: black;
+    color: red;
+    border-color: red;
+}
+
+.winner-message.show {
+    display: flex;
+}
+
+:root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+  }
+
+
+.game {
+    margin: 0 auto;
+    display: grid;
+    height: 350px;
+    width: 350px;
+    justify-content: center;
+    justify-items: center;       
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
+}
+
+.box {
+    background-color: #ffbd07;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px solid #6d6d6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.box.x,
+.box.circle {
+    cursor: not-allowed;
+}
+
+
+
+.box.x::before,
+.box.x::after {
+    content: "";
+    width: calc(var(--mark-size) * .15);
+    position: absolute;
+    height: var(--mark-size);
+    background-color: chartreuse;
+}
+
+.box.x::before {
+    transform: rotate(45deg);
+}
+
+.box.x::after {
+    transform: rotate(-45deg);
+}
+
+.box.circle::before,
+.box.circle::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+}
+
+.box.circle::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: rgb(20, 50, 220);
+}
+
+.box.circle::after {
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+   background-color: #ffbd07;
+   ;

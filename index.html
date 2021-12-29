@@ -8,43 +8,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
     
 </head>
 <body>
     
     <div>
-        <h1>Tic Tac Toe</h1>
-        <h2 class = "quote">Life is like a game, there are many players. If you don't play with them, they'll play with you</h2>
-    </div>
 
-
-    <div class="display">
-        
-    <button class = "begin">Start</button>
-    <button class = "reset">Restart Game</button>
-    </div>
-
-
-    <div>
-        <h3 class = "playerOne">Player 456</h3>
-        <h4 class = "playerTwo">Player 001</h4>
-    </div>
-
-    <div class = "game">
-            <div class = "box" id = 0></div>
-            <div class = "box" id = 1></div>
-            <div class = "box" id = 2></div>
-            <div class = "box" id = 3></div>
-            <div class = "box" id = 4></div>
-            <div class = "box" id = 5></div>
-            <div class = "box" id = 6></div>
-            <div class = "box" id = 7></div>
-            <div class = "box" id = 8></div>
-    </div>
+        <div class = "heading">
+            <h1>Tic Tac Toe</h1>
+            <h2>Life is like a game, there are many players. If you don't play with them, they'll play with you.</h2>
+        </div>
     
+    
+         <!-- <div class = xUmbrella><img src="umbrella.png"></div> 
+         <div class = oStar><img src="star.png"></div> -->
+    
+    
+        <div class = "game" id = "game">
+            <div class="box" data-box = "0"></div>
+            <div class="box" data-box = "1"></div>
+            <div class="box" data-box = "2"></div>
+            <div class="box" data-box = "3"></div>
+            <div class="box" data-box = "4"></div>
+            <div class="box" data-box = "5"></div>
+            <div class="box" data-box = "6"></div>
+            <div class="box" data-box = "7"></div>
+            <div class="box" data-box = "8"></div>
+        </div>
+    
+    
+        <div class="winner-message" id = "winner-message">
+            <div data-winning-message> </div>
+            <button id = "restartButton">Restart</button>
+        </div>
+
+        
+        <script src="script.js"></script>
 
 </body>
 </html>
